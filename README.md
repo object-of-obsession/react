@@ -8,7 +8,7 @@
 
 ### Простые
 Представляется в виде функций
-```javascript
+```jsx
 function Hero() {
   return (
     <div className="container">
