@@ -79,10 +79,11 @@ class Sample extends Component {
 }
 ```
 
+## Хэндлер меняющий стейт
 ```javascript
 class App extends Component {
-	constructor () {
-		super();
+	constructor (props) {
+		super(props);
 		this.state={ 
 			name: 'Will',
 		}
@@ -105,6 +106,77 @@ class App extends Component {
 	}
 }
 ```
+
+
+### Обмен данными между компонентами
+```javascript
+import React, { Component } from 'react';
+import './App.css';
+import Button from './Button';
+import Text from './Text';
+
+class App extends Component {
+	constructor (props) {
+		super(props);
+		this.handleClick = this.handleClick.bind(this);
+		this.state={ 
+			counter: 0,
+		}
+	}
+
+	handleClick() {
+		this.setState({ counter: ++this.state.counter})
+	}
+
+	render() {
+		return (
+			<div>
+				<Button
+					handler={this.handleClick}
+				/>
+				<Text
+					counter={this.state.counter}
+				/>
+			</div>
+		)
+	}
+}
+```
+
+```javascript
+import React, { Component } from 'react';
+import './Button.css';
+
+class Button extends Component {
+	render() {
+		return (
+			<button onClick={this.props.handler}>
+				Жмакни!
+			</button>
+		);
+	}
+}
+
+export default Button;
+
+```
+
+```javascript
+import React, { Component } from 'react';
+import './Text.css';
+
+class Text extends Component {
+	render() {
+		return (
+			<div>Уже нажали {this.props.counter} раз!</div>
+		);
+	}
+}
+
+export default Text;
+
+```
+
 
 ## Деструктуризация
 ```javascript
