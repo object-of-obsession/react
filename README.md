@@ -79,6 +79,33 @@ class Sample extends Component {
 }
 ```
 
+```javascript
+class App extends Component {
+	constructor () {
+		super();
+		this.state={ 
+			name: 'Will',
+		}
+	}
+
+	handleClick() {
+		alert('this is:', this);
+		setTimeout(() => {
+			this.setState({ name: 'Bob' });
+		}, 1000);
+	}
+
+	render() {
+		return (
+			<div>
+				<div>{ this.state.name }</div>
+				<div onClick={ this.handleClick.bind(this) }>Клик</div>
+			</div>
+		);
+	}
+}
+```
+
 ## Деструктуризация
 ```javascript
 const { name, title } = this.props
