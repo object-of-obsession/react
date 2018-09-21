@@ -107,6 +107,40 @@ class App extends Component {
 }
 ```
 
+### Изменение переменных в зависимости от стейта 
+```javascript
+import React, { Component } from 'react';
+import './Checkbox.css';
+
+class Checkbox extends Component {
+  constructor(props) {
+    super(props);
+    this.handleChecked = this.handleChecked.bind(this);
+    this.state = { checked: true };
+  }
+
+  handleChecked() {
+		this.setState({ checked: !this.state.checked })
+	}
+
+	render() {
+		var msg;
+		if(this.state.checked) {
+			msg = 'checked'
+		} else {
+			msg = 'unchecked'
+		}
+		return (
+			<div>
+				<input type="checkbox" onChange={ this.handleChecked} defaultChecked={ this.state.checked } />
+				<h3> Checkbox is {msg} </h3>
+			</div>
+		);
+	}
+}
+
+export default Checkbox;
+```
 
 ### Обмен данными между компонентами
 ```javascript
@@ -158,7 +192,6 @@ class Button extends Component {
 }
 
 export default Button;
-
 ```
 
 ```javascript
