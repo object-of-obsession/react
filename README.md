@@ -31,7 +31,7 @@ function Hero() {
 
 ### Сложные
 Представляются в виде объектов
-```javascript
+```jsx
 import React, { Component } from 'react'
 
 class Article extends Component {
@@ -58,7 +58,7 @@ class Article extends Component {
 1. Использование стрелочной функции;
 2. Явно забиндиться на объект.
 
-```javascript
+```jsx
 import React, { Component } from 'react'
 
 class Sample extends Component {
@@ -80,7 +80,7 @@ class Sample extends Component {
 ```
 
 ## Хэндлер меняющий стейт
-```javascript
+```jsx
 class App extends Component {
 	constructor (props) {
 		super(props);
@@ -108,7 +108,7 @@ class App extends Component {
 ```
 
 ### Изменение переменных в зависимости от стейта 
-```javascript
+```jsx
 import React, { Component } from 'react';
 import './Checkbox.css';
 
@@ -143,7 +143,7 @@ export default Checkbox;
 ```
 
 ### Обмен данными между компонентами
-```javascript
+```jsx
 import React, { Component } from 'react';
 import './App.css';
 import Button from './Button';
@@ -177,7 +177,7 @@ class App extends Component {
 }
 ```
 
-```javascript
+```jsx
 import React, { Component } from 'react';
 import './Button.css';
 
@@ -194,7 +194,7 @@ class Button extends Component {
 export default Button;
 ```
 
-```javascript
+```jsx
 import React, { Component } from 'react';
 import './Text.css';
 
@@ -225,6 +225,19 @@ const name = this.props.name
 
 
 ## Жизненный цикл компонентов
+Методы жизненного цикла доступны исключительно для классовых компонент
+
+constructor(props)
+
+componentWillMount()
+Часто используется для полученя необходимых данных, например отправка запроса за нашей статьей на сервер
+
+затем вызывается метод rennder() 
+От должен быть чистым не содержать никаких сет стейтов, запросов к серверу. Единственная его задача это построить виртуальный DOM нашего компонента, после аостроения виртуального DOM будет построен реальный DOM
+
+и вызовется метод componentDidMount() в котором мы можем реагировать на появление нашего компонента в реальном DOM по оканчанию его инициализации, например мы можем получить размеры или позиционирование DOM узла в которой он отобразился, мы можем подписаться на изменение данных или повесить собственные листнеры на соответствующие DOM элементы
+
+
 
 ## State Lifting (вынесение стейта на уровень выше)
 
