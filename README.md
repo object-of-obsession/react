@@ -56,9 +56,266 @@ class Article extends Component {
 
 Hight-Order Componnet -- нужны для вынесения общей(повторяющейся) части компонентов.
 
-Так или иначе HOC это функция (так как классы это тоже функции). А связать функции междо собой можно двумя свпособами:
+Так или иначе HOC это функция (так как классы это тоже функции). А связать функции между собой можно двумя способами:
 1. Вызвать одну функцию внутри другой;
 2. Передавть одну функцую в качестве параметра в другую функцию.
+
+HOC это компонент, который в нужных местах будет дергать функции, которые пришли к нему в качестве аргументов. В HOC-е склеивается только две функции.
+
+В компоненте высшего порядка мы можем либо добавить какие-то свойства либо наоборот что-то проглотить.
+
+### Пример двух компонентов и HOC-а
+
+App
+``` jsx
+import React, { Component } from 'react';
+import Demo1, from './Demo1';
+import Demo2, from './Demo2';
+import './App.css';
+
+class App extends Component {
+	render() {
+		return (
+			<div>
+				<Demo1 />
+				<Demo2 />
+			</div>
+		)
+	}
+}
+```
+
+Компонент Demo1
+``` jsx
+import React from 'react';
+
+import withPermission from './permissionRequired'
+
+function Demo1() {
+  return (
+  	<p>
+  		I am powerful component for everyone
+  	</p>
+  )
+}
+
+export default withPermission(Demo, 'everyone');
+```
+
+Компонент Demo2
+``` jsx
+// Demo 2
+import React from 'react';
+
+import withPermission from './permissionRequired'
+
+function Demo2() {
+  return (
+  	<p>
+  		I am powerful component for admin only
+  	</p>
+  )
+}
+
+export default withPermission(Demo, 'admin');
+```
+
+HOC permissionRequired
+``` jsx
+import React from 'react'
+
+function requirePermission(Component, requiredLevel) {
+	const user = {
+		level: 'admin',
+		name: 'Vasya'
+	}
+
+	return class Article extends Component {
+		render() {
+			if (user.level !== 'admin' && requiredLevel === 'admin') {
+				return null
+			} else {
+				<Component/>
+			}
+		}
+	}
+}
+
+export default requirePermission;
+```
+
+### Тоже самое только с карированием
+
+App
+``` jsx
+import React, { Component } from 'react';
+import Demo1, from './Demo1';
+import Demo2, from './Demo2';
+import './App.css';
+
+class App extends Component {
+	render() {
+		return (
+			<div>
+				<Demo1 />
+				<Demo2 />
+			</div>
+		)
+	}
+}
+```
+
+Компонент Demo1
+``` jsx
+import React from 'react';
+
+import withPermission from './permissionRequired'
+
+function Demo1() {
+  return (
+  	<p>
+  		I am powerful component for everyone
+  	</p>
+  )
+}
+
+export default withPermission('admin')(Demo1);
+```
+
+Компонент Demo2
+``` jsx
+// Demo 2
+import React from 'react';
+
+import withPermission from './permissionRequired'
+
+function Demo2() {
+  return (
+  	<p>
+  		I am powerful component for admin only
+  	</p>
+  )
+}
+
+export default withPermission('admin')(Demo2);
+```
+
+HOC permissionRequired
+
+``` jsx
+import React from 'react';
+
+//requirePermission это функция, которую нужно вначале вызвать с параметром requiredLevel, а потом с параметром Componet
+const requirePermission = requiredLevel => Component => {
+	const user = {
+		level: 'admin',
+		name: 'Vasya'
+	}
+
+	return class Article extends Component {
+		render() {
+			if (user.level !== 'admin' && requiredLevel === 'admin') {
+				return null
+			} else {
+				<Component/>
+			}
+		}
+	}
+}
+
+export default requirePermission;
+```
+
+
+
+
+### Тоже самое только с пропсами
+
+App
+``` jsx
+import React, { Component } from 'react';
+import Demo1, from './Demo1';
+import Demo2, from './Demo2';
+import './App.css';
+
+class App extends Component {
+	render() {
+		return (
+			<div>
+				<Demo1 />
+				<Demo2 message="Hello there!" />
+			</div>
+		)
+	}
+}
+
+```
+
+
+Компонент Demo1
+``` jsx
+import React from 'react';
+
+import withPermission from './permissionRequired'
+
+function Demo1() {
+  return (
+  	<p>
+  		I am powerful component for everyone
+  	</p>
+  )
+}
+
+export default withPermission('admin')(Demo1);
+```
+
+Компонент Demo2
+``` jsx
+// Demo 2
+import React from 'react';
+
+import withPermission from './permissionRequired'
+
+function Demo2({ message, user }) {
+  return (
+  	<p>
+  		I am powerful { message } for { user.name }
+  	</p>
+  )
+}
+
+export default withPermission('admin')(Demo2);
+```
+
+HOC permissionRequired
+
+``` jsx
+import React from 'react';
+
+const requirePermission = requiredLevel => Component => {
+	const user = {
+		level: 'admin',
+		name: 'Vasya'
+	}
+
+	// this.props
+	return class Article extends Component {
+		render() {
+			if (user.level !== 'admin' && requiredLevel === 'admin') {
+				return null
+			} else {
+				<Component user={user} {...this.props}/> // передаем все пропсы, которые пришли
+			}
+		}
+	}
+}
+
+export default requirePermission;
+```
+
+Все что нужно знать на первом этапе, так это то что с помощью HOC:
+Мы вынесли кусок функциональности в HOC -> Вернули компонент обертку -> Добавили новое поведение в отрисовку -> И присунули новое свойство
+
 
 ## Свойства и состояния
 Свойства не меняются а состояния меняются
