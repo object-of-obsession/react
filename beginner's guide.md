@@ -24,6 +24,8 @@ const Greetings = ({ firstName }) => (
 
 В React используется односторонняя привязка данных. Это — большой плюс, так как выражается это в том, что программист всегда точно знает о том, что привело к изменению состояния приложения. Подобный подход к привязке данных значительно упрощает отладку.
 
+!!!!!!**от родителя к детям**
+
 ### Механики из графичеких редакторов
 
 Компонентный подход React похож на компоненты Figma или символы Sketch. Компоненты можно вкладывать друг в друга и переопределять стили.
@@ -58,21 +60,32 @@ const Greetings = ({ firstName }) => (
 
 
 ## Ссылки js
-[Опыт программирования на javascript](https://kaineer.gitbooks.io/coding-in-javascript/)
+[Опыт программирования на javascript](https://kaineer.gitbooks.io/coding-in-javascript/)  
 [Базовый курс](https://code-basics.ru/languages/javascript) от Hexlet (ru)
 []()
 
 ## Желательно знать
 
-html/css
+html/css  
 javascript:
 
-функции обычного js и es6
-
+типы данных  
+циклы  
+функции обычного js и es6  
 массивы и методы работы с ними. в детали можно не вдаваться, просто иметь в виду. минимум:
-[filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce), [every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some), [find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), [findindex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findindex)
+[filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce), [every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some), [find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), [findindex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findindex)  
+[модули](https://learn.javascript.ru/modules): import, export  
+!!!**объекты**  
+!!!**события**  
+!!!**классы**  
+!!!**шаблонные строки**  
+!!!**DOM**
 
-[модули](https://learn.javascript.ru/modules): import, export
+план
+читаешь js
+делаешь простую аппку с парой компонентов
+дробим задачи по opencharge, раздаем
+
 
 
 ## Простое приложение
