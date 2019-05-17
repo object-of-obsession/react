@@ -71,16 +71,19 @@ html/css
 javascript:
 
 типы данных  
+- !!!**шаблонные строки**  
+
 циклы  
 функции обычного js и es6  
-массивы и методы работы с ними. в детали можно не вдаваться, просто иметь в виду. минимум:
-[filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce), [every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some), [find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), [findindex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findindex)  
-[модули](https://learn.javascript.ru/modules): import, export  
+массивы (БИБЛИОТЕКА LODASH) и методы работы с ними. в детали можно не вдаваться, просто иметь в виду. минимум:
+[filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce), [find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)  
+[модули](https://learn.javascript.ru/modules): import, export в рамках реакта  
 !!!**объекты**  
-!!!**события**  
-!!!**классы**  
-!!!**шаблонные строки**  
-!!!**DOM**
+!!!**события** preventdef + stop propag  
+!!!**классы** в реакте  
+!!!**DOM** в реакте + картинка
+лайфсайкл
+роуты
 
 план
 читаешь js
