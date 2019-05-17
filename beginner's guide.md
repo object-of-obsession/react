@@ -16,9 +16,10 @@ React-разработка заключается в описании того, 
 const element = <h1>Hello, world!</h1>;
 
 const Greetings = ({ firstName }) => (
-   <div>Hi, {firstName}</div>
+   <div>Hi, {firstName}</div> // в JSX фигурные скобки используются для выражений
 );
 ```
+Подробнее о [выражениях](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions).
 
 ### Особенности механизма привязки данных
 
@@ -91,8 +92,8 @@ javascript:
 ## Простое приложение
 ### установка
 ```
-git clone  
-cd react-simple-app  
+npm i create-react-app  
+cd create-react-app  
 ```
 
 ### структура
