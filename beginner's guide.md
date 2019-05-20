@@ -164,7 +164,7 @@ app
 ### **Файлы**
 
 **index.js**
-```
+```jsx
                                                   // импорт
 import React from 'react';                        // React
 import ReactDOM from 'react-dom';                 // ReactDOM
@@ -180,14 +180,14 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 
 **index.html**
-```
+```html
 ...
 <div id="root"></div> // здесь React рендерит компонент App
 ...
 ```
 
 **App.js**
-```
+```jsx
                                   // импорт
 import React from 'react';        // React, нужен для создания функционального компонента и читения JSX
 import logo from './logo.svg';    // графика
@@ -262,11 +262,11 @@ Error: ENOENT: no such file or directory / can't resolve path ...
 ```
 Мы переместили файлы, но не изменили пути импорта модулей. Без исправления билд не запустится.  
 Посомтрим в `index.js`. Он использует перемещённый компонент `App`. 
-```
+```jsx
 import App from './App';
 ```
 `./` означает, что `index.js` будет искать компонент в `src` (в той папке, где находится сам), а нам нужна папка с имененем компонента `App`:
-```
+```jsx
 import App from './App/App';
 ```
 Есть еще ошибка, связанная с svg-файлом. Попробуйте разобраться в чем дело.  
@@ -277,7 +277,7 @@ import App from './App/App';
 ### **2. Добавим компоненты**
 
 Пока у нас есть единственный функциональный компонент `App`. Добавим еще один компонент, но [классовый](https://reactjs.org/docs/react-component.html). Чтобы не возиться с версткой, возьмем тег \<p> и его содержимое из `App` и сделаем его компонентом.
-```
+```html
 <p>
   Edit <code>src/App.js</code> and save to reload.
 </p>
