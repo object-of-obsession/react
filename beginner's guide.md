@@ -47,7 +47,7 @@ const Greetings = ({ firstName }) => (
   *кратко изложены методы и подходы в виде сниппетов кода*
 
 [Видео](https://youtu.be/gRs7NbEZMCg) основы React от создателя Framer (en)  
-  *???*
+  *нет описания*
 
 [Книга-курс](https://maxfarseer.gitbooks.io/react-course-ru-v2/content/) для начинающих (ru)  
   *пошаговое создание небольшого приложения новостей (добавление, просмотр "подробнее")*
@@ -56,53 +56,32 @@ const Greetings = ({ firstName }) => (
   *пошаговое создание to do app*
 
 Курс Евгения Родионова: [этап 1](https://erodionov.ru/courses/react/9wO7ihaBIk), [этап 2](https://erodionov.ru/courses/react/rHAh7OXEFL), [этап 3](https://erodionov.ru/courses/react/tHKYMIR4QG) (ru)  
-  *???*
+  *нет описания*
 
 
 # Ссылки js
 
 [Опыт программирования на javascript](https://kaineer.gitbooks.io/coding-in-javascript/)  
 [Базовый курс](https://code-basics.ru/languages/javascript) от Hexlet (ru)
-[]()
 
 
-# Необходимо знать
+# Необходимые знания
 
 html, css. javascript:
 
-Типы данных [mdn](https://developer.mozilla.org/ru/docs/Web/JavaScript/Data_structures), [learnjs](http://learn.javascript.ru/types-intro)  
-
-Массивы [mdn](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-
+- Типы данных [mdn](https://developer.mozilla.org/ru/docs/Web/JavaScript/Data_structures), [learnjs](http://learn.javascript.ru/types-intro)  
+- Массивы [mdn](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays)
 Методы работы с массивами: [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce), [find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), библиотека [lodash](https://lodash.com/)  
-
-Шаблонные строки  [mdn](hhttps://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/template_strings), [learnjs](https://learn.javascript.ru/es-string) (обратите внимание на \`**кавычки**\`)  
-
-Циклы [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration), [learnjs](https://learn.javascript.ru/while-for)  
-
-
-Функции [mdn](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Functions) (обратите внимание на краткую запись =>, скоуп)
-
-[модули](https://learn.javascript.ru/modules). import, export [в рамках реакта](https://www.geeksforgeeks.org/reactjs-importing-exporting/) <-(?) *маловато*  
-https://stackoverflow.com/questions/36795819/when-should-i-use-curly-braces-for-es6-import/36796281#36796281  
-
-!!!**объекты** [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)  
-
-!!!**события** [mdn](https://developer.mozilla.org/en-US/docs/Web/API/Event), [preventdef](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault), [stoppropag](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)  
-
-!!!**классы** в реакте  
-
-!!!**DOM** в реакте + [картинка1](https://images.app.goo.gl/Ppg7ZQA2o3GYZ3J38), [картинка2](https://images.app.goo.gl/QwodrmEwwf3Mv2ye6), [картинка3 - самая удачная](https://images.app.goo.gl/qr4ewDahPrLmiQ559), [что такое](https://reactjs.org/docs/faq-internals.html)  
-
-лайфсайкл  [оф.дока](https://reactjs.org/docs/state-and-lifecycle.html), [схема работы](https://medium.com/@it_root.corp/react-component-life-cycle-bbe583ca4cb), [схема работы](https://tproger.ru/translations/react-after-learning-basics/), [схема работы](https://habr.com/ru/post/358090/), []()  
-
-роуты [схема работы](http://prgssr.ru/development/pogruzhenie-v-react-router.html), [тутор](https://habr.com/ru/post/329996/), [схема работы](https://getinstance.info/articles/react/learning-react-router/)  
-
-план  
-- читаешь js  
-- делаешь простую аппку с парой компонентов  
-- дробим задачи по opencharge, раздаем. делаем в среде ym  
-
+- Шаблонные строки  [mdn](hhttps://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/template_strings), [learnjs](https://learn.javascript.ru/es-string) (обратите внимание на \`**кавычки**\`)  
+- Циклы [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration), [learnjs](https://learn.javascript.ru/while-for)  
+- Функции [mdn](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Functions) (обратите внимание на краткую запись =>, скоуп)
+- Модули [import, export](https://learn.javascript.ru/modules), модули [в рамках React](https://www.geeksforgeeks.org/reactjs-importing-exporting/), [шпаргалка](https://stackoverflow.com/questions/36795819/when-should-i-use-curly-braces-for-es6-import/36796281#36796281) на stackoverflow  
+- Объекты [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)  
+- События [mdn](https://developer.mozilla.org/en-US/docs/Web/API/Event). Что такое [preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault), [stopPropagation](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)  
+- !!!**классы** в реакте (?)  
+- DOM в React, [как работает](https://reactjs.org/docs/faq-internals.html). **!!!** [картинка1](https://images.app.goo.gl/Ppg7ZQA2o3GYZ3J38), [картинка2](https://images.app.goo.gl/QwodrmEwwf3Mv2ye6), [картинка3 - самая удачная](https://images.app.goo.gl/qr4ewDahPrLmiQ559)  
+- LifeCycle [документация](https://reactjs.org/docs/state-and-lifecycle.html), **!!!** [схема работы](https://medium.com/@it_root.corp/react-component-life-cycle-bbe583ca4cb), [схема работы](https://tproger.ru/translations/react-after-learning-basics/), [схема работы](https://habr.com/ru/post/358090/)  
+- Routing **!!!** [схема работы](http://prgssr.ru/development/pogruzhenie-v-react-router.html), [схема работы](https://getinstance.info/articles/react/learning-react-router/), [тутор](https://habr.com/ru/post/329996/)
 
 
 # Простое приложение  
@@ -111,10 +90,10 @@ https://stackoverflow.com/questions/36795819/when-should-i-use-curly-braces-for-
 
 Для удобства в репозитории уже залит `create-react-app`. Необходимо выполнить две команды:
 ```
-git clone ..
-cd ..
-npm i  
-npm start  
+git clone .. ??
+cd .. ??
+npm i  ??
+npm start  ??
 ```
 [Полное руководство](https://github.com/facebook/create-react-app) по установке `create-react-app`  
 Если все сделано правильно, на экране появится анимированное лого React.
