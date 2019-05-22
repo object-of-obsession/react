@@ -58,6 +58,9 @@ const Greetings = ({ firstName }) => (
 Курс Евгения Родионова: [этап 1](https://erodionov.ru/courses/react/9wO7ihaBIk), [этап 2](https://erodionov.ru/courses/react/rHAh7OXEFL), [этап 3](https://erodionov.ru/courses/react/tHKYMIR4QG) (ru)  
   *нет описания*
 
+Всё, что нужно знать, чтобы [войти в React](https://medium.com/@stasonmars/%D0%B2%D1%81%D0%B5-%D1%87%D1%82%D0%BE-%D0%BD%D1%83%D0%B6%D0%BD%D0%BE-%D0%B7%D0%BD%D0%B0%D1%82%D1%8C-%D1%87%D1%82%D0%BE%D0%B1%D1%8B-%D0%B2%D0%BE%D0%B9%D1%82%D0%B8-%D0%B2-react-%D0%B2-2018-%D0%B3%D0%BE%D0%B4%D1%83-bdbf3a776d21)
+*статья с основными концепциями*
+
 
 # Ссылки js
 
@@ -138,7 +141,7 @@ app
 
 В `index.js` описаны компоненты, которые необходимо отрендерить. В нашем случае это единственный `App`, но их может быть больше. Если импорт описан корректно, приложение смотрит внутрь каждого компонента и собирает сопутствующие файлы, для `App` это стили `App.css`, графика `logo.svg`. Далее метод `getElementById` находит контейнер с `id="root"` в `public/index.html` и рендерит в html-файле компонент `App`, попутно применяя к `index.html` стили `index.css`  
 
-![create-react-app-structure](assets_guide/1-create-react-app-structure.png)  
+![create-react-app-structure](tutorial_assets/1-create-react-app-structure.png)  
 
 ### **Файлы**
 
@@ -165,7 +168,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ...
 ```
 
-**App.js**
+**App.js** (может иметь расширение как `js`, так и `jsx` — как вам нравится)
 ```jsx
                                   // импорт
 import React from 'react';        // React, нужен для создания функционального компонента и читения JSX
@@ -198,7 +201,7 @@ export default App; // экспорт компонента App
 ```
 \* в React компоненты делятся на функциональные и классовые, [почитать](https://reactjs.org/docs/components-and-props.html)
 
-Обратите внимание, что в теле `return` есть один общий `div` с `className="App"`, в него завернуто тело компонента. Дело в том, что в React функция может вернуть только один `div` — **ТРЕБУЕТ УТОЧНЕНИЯ РАЗРАБОТЧИКА**
+Обратите внимание, что в теле `return` есть один общий `div` с `className="App"`, в него завернуто тело компонента. Дело в том, что в React функция может вернуть только один `div` — **ФОРМУЛИРОВКА ТРЕБУЕТ УТОЧНЕНИЯ РАЗРАБОТЧИКА**
 
 Содержимое css файлов вам знакомо, сервис-воркеры не понадобятся.
 
@@ -242,10 +245,12 @@ Error: ENOENT: no such file or directory / can't resolve path ...
 Мы переместили файлы, но не изменили пути импорта модулей. Без исправления билд не запустится.  
 Посомтрим в `index.js`. Он использует перемещённый компонент `App`. 
 ```jsx
+// index.js
 import App from './App';
 ```
 `./` означает, что `index.js` будет искать компонент в `src` (в той папке, где находится сам), а нам нужна папка с имененем компонента `App`:
 ```jsx
+// index.js
 import App from './App/App';
 ```
 Есть еще ошибка, связанная с svg-файлом. Попробуйте разобраться в чем дело.  
@@ -255,16 +260,180 @@ import App from './App/App';
 
 ### **2. Добавим компоненты**
 
-Пока у нас есть единственный функциональный компонент `App`. Добавим еще один компонент, но [классовый](https://reactjs.org/docs/react-component.html). Чтобы не возиться с версткой, возьмем тег \<p> и его содержимое из `App` и сделаем его компонентом.
-```html
+Пока у нас есть единственный функциональный компонент `App`. Добавим еще один компонент, но [классовый](https://reactjs.org/docs/react-component.html). Чтобы не возиться с версткой, вытащим тег \<p> и его содержимое из `App.js` и сделаем его компонентом.
+```jsx
+// App.js
 <p>
   Edit <code>src/App.js</code> and save to reload.
 </p>
 ```
 
-Первым делом нужна папка с имененем компонента, я назвал его Instruction.
+Первым делом нужна папка с имененем компонента, пусть будет Instruction. Также в ней должен пристуствовать файл самого компонента `Instruction.jsx` (напомню, что файлы компонентов могут иметь расширения `.js` и `.jsx`. В данном случае нет связи с тем, что компонент классовый. Просто демонстрация что работает и так, и так). Получаем стуркутуру:
+
+```
+└── src
+    └── App
+        ├── App.css
+        ├── App.js
+        └── App.test.js
+    └── Instruction
+        └── Instruction.jsx
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── serviceWorker.js
+```
+
+В файле компонента Instruction: 
+```jsx
+// Instruction.jsx
+
+import React from 'react';
+
+class Instruction extends React.Component {
+    render() {
+      return (
+        <p>
+            Edit <code>src/App.js</code> and save to reload.
+        </p>
+      )
+    }
+}
+
+export default Instruction;
+```
+
+Сам по себе компонент так и останется лежать в директории, добавим его в компонет `App`.  
+```jsx
+// App.js
+
+import React from 'react';
+import logo from '../logo.svg';
+import './App.css';
+import Instruction from './Instruction';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+
+        // добавили компонент Instruction
+        <Instruction />
+        
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+```
+
+**Задание**: В снипете выше для `App.js` есть ошибка с импортом, попробуйте исправить её.  
+
+Если все верно, в ReactDevTools вы увидите компонент `Instruction`, отрендеренный внутри `App`.
+![added-component-devtools](tutorial_assets/2-added-component-devtools.png)  
+
+**Задание**: в компоненте `App` есть ссылка с текстом *Learn React*. Попробуйте создать классовый или функциональный компонент с названием  `Button` и заменить ссылку на кнопку. Кнопку можно сделать html-тегом `button`, поведение ссылки можно не сохранять. Позже мы эту кнопку закастомим. На выходе получится так:
+![button-component-success](tutorial_assets/3-button-component-success.png)  
+
+Успехов!
+
+
+### **3. Стили**
+
+В React существет (!)[несколько способов](https://medium.com/@stasonmars/%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%BF%D0%BE-%D1%82%D1%80%D1%91%D0%BC-%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B0%D0%BC-%D1%81%D1%82%D0%B8%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-%D0%B2-react-2ca5c0c7464b) применения стилей. В этом туториале рассмотрим CSS модули, так как этот подход наиболее близок к обычной реализации через отдельные CSS файлы и классы. И уже реализован в `create-react-app`.
+
+Если вы обратили внимание, в директории компонента `App` есть файл `App.css`, он подключается в `App.js` в качестве модуля. Внутри обычный css, но собака зарыта в описании классов JSX. Так как слово `class` зарезервировано в js, создатели React придумали писать `className="..."`.  
+
+Давайте закастомим кнопку из предыдущего задания. В репозитории лежит файл со стилями кнопки `tutorial_assets/Button.css`. Попробуйте применить его к компоненту `Button` из предыдущего задания.
+
+Вторым шагом закастомим компонент `Instruction`: подключите в его css файл Open Sans по cdn и можно поменять кегль:
+```css
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+```
+
+Да прибудет с вами сила!
+
+### **4. Роутинг**
+
+В React есть своя система маршрутизации, которая позволяет сопоставлять запросы к приложению с определенными компонентами, другими словами переходить по страницам или менять часть контента страницы по ивенту. Ключевым звеном в работе маршрутизации является модуль [react-router](https://www.npmjs.com/package/react-router), который содержит основной функционал по работе с маршрутизацией. Однако если мы собираемся работать в браузере, нам надо использовать модуль [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start). Чтобы использовать его в туторе выполните:
+```
+npm i react-router-dom
+```
+
+Ознакомьтесь с [базовыми подходами роутинга](https://getinstance.info/articles/react/learning-react-router/) перед началом практики.  
+
+Попробуем простой пример. Нам нужно сделать переход между двумя страницами по клику на кнопку. В компоненте `App` уже есть компонент с кнопкой `Button`, а сам `App` представляет из первую страницу.  
+
+Создайте компонент новой страницы с именеем `Second`. В нем помимо прочих должны быть импортированы модули из `react-router-dom`:
+```
+import { BrowserRouter as Router, Link } from "react-router-dom";
+```
+`Second` будет возвращать следующую разметку:
+```jsx
+<div style={{ margin: '20px' }}>
+  ← Go back to App
+</div>
+```
+Этот текст позже станет контролом, который будет возвращать пользователя на первую страницу. Обратите внимание,  используется [инлайновая стилизация JSX](https://blog.cloudboost.io/using-inline-styles-in-jsx-c1d03cbe6fe0).
+
+Теперь надо научить приложение видеть разные страницы и использовать правильный путь при переходе. Для этого `Router` нужно передать как аргумент в метод `ReactDOM.render` вместо `App`:
+```jsx
+// index.js
+
+// ReactDOM.render(<App />, document.getElementById('root')); строку можно удалить
+ReactDOM.render((
+    <Router>
+        <Route path="/" component={App} />            // роут 1
+        <Route path="/second" component={Second} />   // роут 2
+    </Router>
+), document.getElementById('root'));
+```
+Роут 1 говорит, что компонент `App` будет показан по адресу `http://localhost:3000/`.  
+Роут 2 говорит, что компонент `Second` будет показан по адресу `http://localhost:3000/second`.  
+Таким образом в div с `root` в зависимости от адреса будут рендериться разные компоненты.
+
+Любой Route может иметь [параметр `exact`](https://stackoverflow.com/questions/49162311/react-difference-between-route-exact-path-and-route-path).
+
+Контролам тоже нужна инструкция для перехода. Компонет `Button` ведет на страницу `Second`, значит он должен возвращать помимо кнопки еще и ссылку:
+```jsx
+import React from "react"
+import "./Button.css"
+import { BrowserRouter as Router, Link } from "react-router-dom"; // добавлены модули для роутинга
+
+function Button() {
+    return (
+        <Link to="/second">   // кнопка завернута в линк со ссылкой на нужный адрес
+            <button className="button">Learn React</button>
+        </Link>
+    )
+}
+
+export default Button;
+```
+Попробуйте обновить сборку и посмотреть, работает ли переход. Должен работать в одну сторону, обратно вернуться нельзя. Это из-за того, что в компоненте `Second` текст `← Go back to App` еще не стал ссылкой и не получил адрес.  
+Попробуйте сделать это самостоятельно.  
+
+Если все правильно, приложение должно работать так:  
+![routing](tutorial_assets/4-routing.gif)  
+
+
+
+
+# Финал  
+Спасибо, что прошли туториал. Если у вас есть предложения, присылайте в [issues](https://github.com/object-of-obsession/react/issues)
 
 <!-- # Источники
 
 [React.js: понятное руководство для начинающих](https://habr.com/ru/company/ruvds/blog/428077/)
-[text](#adress) -->
+[Определение маршрутов](https://metanit.com/web/react/4.1.php)
+[text](#adress) 
+
+-->
