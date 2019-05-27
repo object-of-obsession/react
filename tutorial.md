@@ -36,6 +36,23 @@ const Greetings = ({ firstName }) => (
 
 Кривая обучения — это важный фактор, который нужно учитывать при выборе UI-фреймворка. В этой связи надо отметить, что в React имеется меньше абстракций, чем, скажем, в Angular. Для того, чтобы разобраться, потребуется некоторое время, но приступить к работе можно **очень и очень быстро**.
 
+# Необходимые знания
+
+html, css. javascript:
+
+- Типы данных [mdn](https://developer.mozilla.org/ru/docs/Web/JavaScript/Data_structures), [learnjs](http://learn.javascript.ru/types-intro)  
+- Массивы [mdn](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays)
+Методы работы с массивами: [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce), [find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), библиотека [lodash](https://lodash.com/)  
+- Шаблонные строки  [mdn](hhttps://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/template_strings), [learnjs](https://learn.javascript.ru/es-string) (обратите внимание на \`**кавычки**\`)  
+- Циклы [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration), [learnjs](https://learn.javascript.ru/while-for)  
+- Функции [mdn](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Functions) (обратите внимание на краткую запись =>, скоуп)
+- Модули [import, export](https://learn.javascript.ru/modules), модули [в рамках React](https://www.geeksforgeeks.org/reactjs-importing-exporting/), [шпаргалка](https://stackoverflow.com/questions/36795819/when-should-i-use-curly-braces-for-es6-import/36796281#36796281) на stackoverflow  
+- Объекты [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)  
+- События [mdn](https://developer.mozilla.org/en-US/docs/Web/API/Event). Что такое [preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault), [stopPropagation](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)  
+- [Классы](https://getinstance.info/articles/react/react-and-es6-part2/) в React 
+- DOM в React, [как работает](https://reactjs.org/docs/faq-internals.html). [Схема работы](https://images.app.goo.gl/qr4ewDahPrLmiQ559)  
+- LifeCycle [оф.документация](https://reactjs.org/docs/state-and-lifecycle.html). Статьи по теме: [1](https://tproger.ru/translations/react-after-learning-basics/), [2](https://habr.com/ru/post/358090/), [3](https://medium.com/@it_root.corp/react-component-life-cycle-bbe583ca4cb)  
+- Routing. Как работает [1](http://prgssr.ru/development/pogruzhenie-v-react-router.html), [2](https://getinstance.info/articles/react/learning-react-router/). [Туториал](https://habr.com/ru/post/329996/)  
 
 # Материалы по react.js  
 
@@ -64,31 +81,6 @@ const Greetings = ({ firstName }) => (
 
 Всё, что нужно знать, чтобы [войти в React](https://medium.com/@stasonmars/%D0%B2%D1%81%D0%B5-%D1%87%D1%82%D0%BE-%D0%BD%D1%83%D0%B6%D0%BD%D0%BE-%D0%B7%D0%BD%D0%B0%D1%82%D1%8C-%D1%87%D1%82%D0%BE%D0%B1%D1%8B-%D0%B2%D0%BE%D0%B9%D1%82%D0%B8-%D0%B2-react-%D0%B2-2018-%D0%B3%D0%BE%D0%B4%D1%83-bdbf3a776d21) (ru)  
 *статья с основными концепциями*
-
-
-<!-- # Ссылки js
-
-[Опыт программирования на javascript](https://kaineer.gitbooks.io/coding-in-javascript/)  
-[Базовый курс](https://code-basics.ru/languages/javascript) от Hexlet (ru) -->
-
-
-# Необходимые знания
-
-html, css. javascript:
-
-- Типы данных [mdn](https://developer.mozilla.org/ru/docs/Web/JavaScript/Data_structures), [learnjs](http://learn.javascript.ru/types-intro)  
-- Массивы [mdn](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-Методы работы с массивами: [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce), [find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), библиотека [lodash](https://lodash.com/)  
-- Шаблонные строки  [mdn](hhttps://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/template_strings), [learnjs](https://learn.javascript.ru/es-string) (обратите внимание на \`**кавычки**\`)  
-- Циклы [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration), [learnjs](https://learn.javascript.ru/while-for)  
-- Функции [mdn](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Functions) (обратите внимание на краткую запись =>, скоуп)
-- Модули [import, export](https://learn.javascript.ru/modules), модули [в рамках React](https://www.geeksforgeeks.org/reactjs-importing-exporting/), [шпаргалка](https://stackoverflow.com/questions/36795819/when-should-i-use-curly-braces-for-es6-import/36796281#36796281) на stackoverflow  
-- Объекты [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)  
-- События [mdn](https://developer.mozilla.org/en-US/docs/Web/API/Event). Что такое [preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault), [stopPropagation](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)  
-- [Классы](https://getinstance.info/articles/react/react-and-es6-part2/) в React 
-- DOM в React, [как работает](https://reactjs.org/docs/faq-internals.html). [Схема работы](https://images.app.goo.gl/qr4ewDahPrLmiQ559)  
-- LifeCycle [оф.документация](https://reactjs.org/docs/state-and-lifecycle.html). Статьи по теме: [1](https://tproger.ru/translations/react-after-learning-basics/), [2](https://habr.com/ru/post/358090/), [3](https://medium.com/@it_root.corp/react-component-life-cycle-bbe583ca4cb)  
-- Routing. Как работает [1](http://prgssr.ru/development/pogruzhenie-v-react-router.html), [2](https://getinstance.info/articles/react/learning-react-router/). [Туториал](https://habr.com/ru/post/329996/)
 
 
 # Простое приложение  
