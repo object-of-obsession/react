@@ -44,8 +44,14 @@ const Greetings = ({ firstName }) => (
 [Шпаргалка по библиотеке](https://devhints.io/react) для версий 15 и 16 (en)  
   *кратко изложены методы и подходы в виде сниппетов кода*
 
+Книга [Реакт быстро](https://www.ozon.ru/context/detail/id/149669993/)  
+  *подробное, пошаговое описание для старта работы (максимально развернуто)*
+
 [Видео](https://youtu.be/gRs7NbEZMCg) основы React от создателя Framer (en)  
   *нет описания*
+
+Видеокурс [основы React](https://www.youtube.com/playlist?list=PLD-piGJ3Dtl0WEK67FD1bUGryqqaY_eU-)  
+  *база для старта*
 
 [Книга-курс](https://maxfarseer.gitbooks.io/react-course-ru-v2/content/) для начинающих (ru)  
   *пошаговое создание небольшого приложения новостей (добавление, просмотр "подробнее")*
@@ -79,10 +85,10 @@ html, css. javascript:
 - Модули [import, export](https://learn.javascript.ru/modules), модули [в рамках React](https://www.geeksforgeeks.org/reactjs-importing-exporting/), [шпаргалка](https://stackoverflow.com/questions/36795819/when-should-i-use-curly-braces-for-es6-import/36796281#36796281) на stackoverflow  
 - Объекты [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)  
 - События [mdn](https://developer.mozilla.org/en-US/docs/Web/API/Event). Что такое [preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault), [stopPropagation](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)  
-- !!!**классы** в реакте (?)  
-- DOM в React, [как работает](https://reactjs.org/docs/faq-internals.html). **!!!** [картинка1](https://images.app.goo.gl/Ppg7ZQA2o3GYZ3J38), [картинка2](https://images.app.goo.gl/QwodrmEwwf3Mv2ye6), [картинка3 - самая удачная](https://images.app.goo.gl/qr4ewDahPrLmiQ559)  
-- LifeCycle [документация](https://reactjs.org/docs/state-and-lifecycle.html), **!!!** [схема работы](https://medium.com/@it_root.corp/react-component-life-cycle-bbe583ca4cb), [схема работы](https://tproger.ru/translations/react-after-learning-basics/), [схема работы](https://habr.com/ru/post/358090/)  
-- Routing **!!!** [схема работы](http://prgssr.ru/development/pogruzhenie-v-react-router.html), [схема работы](https://getinstance.info/articles/react/learning-react-router/), [тутор](https://habr.com/ru/post/329996/)
+- [Классы](https://getinstance.info/articles/react/react-and-es6-part2/) в React 
+- DOM в React, [как работает](https://reactjs.org/docs/faq-internals.html). [Схема работы](https://images.app.goo.gl/qr4ewDahPrLmiQ559)  
+- LifeCycle [оф.документация](https://reactjs.org/docs/state-and-lifecycle.html). Статьи по теме: [1](https://tproger.ru/translations/react-after-learning-basics/), [2](https://habr.com/ru/post/358090/), [3](https://medium.com/@it_root.corp/react-component-life-cycle-bbe583ca4cb)  
+- Routing. Как работает [1](http://prgssr.ru/development/pogruzhenie-v-react-router.html), [2](https://getinstance.info/articles/react/learning-react-router/). [Туториал](https://habr.com/ru/post/329996/)
 
 
 # Простое приложение  
