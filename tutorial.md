@@ -44,13 +44,13 @@ const Greetings = ({ firstName }) => (
 [Шпаргалка по библиотеке](https://devhints.io/react) для версий 15 и 16 (en)  
   *кратко изложены методы и подходы в виде сниппетов кода*
 
-Книга [Реакт быстро](https://www.ozon.ru/context/detail/id/149669993/)  
+Книга [Реакт быстро](https://www.ozon.ru/context/detail/id/149669993/) (ru)  
   *подробное, пошаговое описание для старта работы (максимально развернуто)*
 
 [Видео](https://youtu.be/gRs7NbEZMCg) основы React от создателя Framer (en)  
   *нет описания*
 
-Видеокурс [основы React](https://www.youtube.com/playlist?list=PLD-piGJ3Dtl0WEK67FD1bUGryqqaY_eU-)  
+Видеокурс [основы React](https://www.youtube.com/playlist?list=PLD-piGJ3Dtl0WEK67FD1bUGryqqaY_eU-) (ru)  
   *база для старта*
 
 [Книга-курс](https://maxfarseer.gitbooks.io/react-course-ru-v2/content/) для начинающих (ru)  
