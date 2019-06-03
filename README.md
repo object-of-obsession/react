@@ -80,7 +80,11 @@ html, css. javascript:
   *нет описания*
 
 Всё, что нужно знать, чтобы [войти в React](https://medium.com/@stasonmars/%D0%B2%D1%81%D0%B5-%D1%87%D1%82%D0%BE-%D0%BD%D1%83%D0%B6%D0%BD%D0%BE-%D0%B7%D0%BD%D0%B0%D1%82%D1%8C-%D1%87%D1%82%D0%BE%D0%B1%D1%8B-%D0%B2%D0%BE%D0%B9%D1%82%D0%B8-%D0%B2-react-%D0%B2-2018-%D0%B3%D0%BE%D0%B4%D1%83-bdbf3a776d21) (ru)  
-*статья с основными концепциями*
+*статья с основными концепциями*  
+
+[JavaScript fundamentals](https://www.robinwieruch.de/javascript-fundamentals-react-requirements/) before learning React (en)  
+Автор предлагает список основ js перед стартом React
+
 
 
 # Простое приложение  
