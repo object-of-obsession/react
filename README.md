@@ -167,7 +167,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
                                   // импорт
 import React from 'react';        // React, нужен для создания функционального компонента и читения JSX
 import logo from './logo.svg';    // графика
-import './App.css';               // стили компонента
+import style from './App.css';               // стили компонента
 
 // компонент App, функциональный*
 function App() {
@@ -363,7 +363,7 @@ function App() {
 
 В React есть своя система маршрутизации, которая позволяет сопоставлять запросы к приложению с определенными компонентами, другими словами переходить по страницам или менять часть контента страницы по ивенту. Ключевым звеном в работе маршрутизации является модуль [react-router](https://www.npmjs.com/package/react-router), который содержит основной функционал по работе с маршрутизацией. Однако если мы собираемся работать в браузере, нам надо использовать модуль [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start). Чтобы использовать его в туторе выполните:
 ```
-npm i react-router-dom
+npm i react-router-dom@1.2.3
 ```
 
 Ознакомьтесь с [базовыми подходами роутинга](https://getinstance.info/articles/react/learning-react-router/) перед началом практики.  
@@ -437,3 +437,5 @@ export default Button;
 [text](#adress) 
 
 -->
+
+Спасибо Яне за помощь в редактировании матриала
