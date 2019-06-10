@@ -51,8 +51,9 @@ html, css. javascript:
 - События [mdn](https://developer.mozilla.org/en-US/docs/Web/API/Event). Что такое [preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault), [stopPropagation](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)  
 - [Классы](https://getinstance.info/articles/react/react-and-es6-part2/) в React 
 - DOM в React, [как работает](https://reactjs.org/docs/faq-internals.html). [Схема работы](https://images.app.goo.gl/qr4ewDahPrLmiQ559)  
-- LifeCycle [оф.документация](https://reactjs.org/docs/state-and-lifecycle.html). Статьи по теме: [1](https://tproger.ru/translations/react-after-learning-basics/), [2](https://habr.com/ru/post/358090/), [3](https://medium.com/@it_root.corp/react-component-life-cycle-bbe583ca4cb)  
-- Routing. Как работает [1](http://prgssr.ru/development/pogruzhenie-v-react-router.html), [2](https://getinstance.info/articles/react/learning-react-router/). [Туториал](https://habr.com/ru/post/329996/)  
+- State (состояния): [оф.документация](https://ru.reactjs.org/docs/state-and-lifecycle.html), [еще теория](https://metanit.com/web/react/2.4.php)  
+- LifeCycle (жизненный цикл): [оф.документация](https://reactjs.org/docs/state-and-lifecycle.html). Статьи по теме: [1](https://tproger.ru/translations/react-after-learning-basics/), [2](https://habr.com/ru/post/358090/), [3](https://medium.com/@it_root.corp/react-component-life-cycle-bbe583ca4cb)  
+- Routing (роутинг): [туториал](https://habr.com/ru/post/329996/)  
 
 # Материалы по react.js  
 
