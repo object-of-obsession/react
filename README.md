@@ -167,7 +167,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
                                   // импорт
 import React from 'react';        // React, нужен для создания функционального компонента и читения JSX
 import logo from './logo.svg';    // графика
-import style from './App.css';               // стили компонента
+import './App.css';               // стили компонента
 
 // компонент App, функциональный*
 function App() {
@@ -429,13 +429,3 @@ export default Button;
 Попробуйте пройтись взглядом по всем файлам в `/src` и вспомнить смысл кода. Также полезно заглянуть в ReactDevTools на каждой странице — в работе с React этот плагин более информативен, чем инспектор браузера.
 
 Если у вас есть предложения, присылайте в [issues](https://github.com/object-of-obsession/react/issues).
-
-<!-- # Источники
-
-[React.js: понятное руководство для начинающих](https://habr.com/ru/company/ruvds/blog/428077/)
-[Определение маршрутов](https://metanit.com/web/react/4.1.php)
-[text](#adress) 
-
--->
-
-Спасибо Яне за помощь в редактировании матриала
