@@ -84,10 +84,10 @@ html, css. javascript:
 *статья с основными концепциями*  
 
 [JavaScript fundamentals](https://www.robinwieruch.de/javascript-fundamentals-react-requirements/) before learning React (en)  
-*Автор предлагает список основ js перед стартом React*
+*Автор предлагает список основ js перед стартом React*  
 
-[Статьи по react](https://www.robinwieruch.de/categories/react/) (en)
-*на разные темы*
+[Статьи по react](https://www.robinwieruch.de/categories/react/) (en)  
+*на разные темы*  
 
 
 # Простое приложение  
